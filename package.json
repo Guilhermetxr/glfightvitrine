@@ -1,0 +1,9 @@
+{
+  "name": "site-apresentacao-gl",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 5174 --bind 127.0.0.1",
+    "check": "node --check js/atleta.js"
+  }
+}
