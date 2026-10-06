@@ -220,7 +220,8 @@ h2 em { color: transparent; -webkit-text-stroke: 1.5px var(--violet-hi); }
 .badge strong { font: 900 2.6rem/1 var(--f-display); color: var(--violet-hi); }
 .badge-a { left: -48px; bottom: 14%; }
 .badge-b { right: -26px; top: 9%; animation-delay: -3s; }
-.belt { width: 34px; height: 10px; border-radius: 2px; background: linear-gradient(90deg, #8fd3ff, #bfe8ff); box-shadow: 0 0 14px rgb(143 211 255 / .6); }
+/* faixa azul-claro com ponta azul-escuro */
+.belt { width: 34px; height: 10px; border-radius: 2px; background: linear-gradient(90deg, #9ad8ff 0 68%, #1d3fbf 68%); box-shadow: 0 0 14px rgb(143 211 255 / .5); }
 @keyframes float { 50% { transform: translateY(-10px); } }
 
 .scroll-cue {
@@ -331,10 +332,16 @@ h2 em { color: transparent; -webkit-text-stroke: 1.5px var(--violet-hi); }
 .award-body { position: relative; z-index: 2; }
 .award-kicker { display: block; font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--violet-hi); margin-bottom: 12px; position: relative; z-index: 2; }
 .award h3 { font: 900 clamp(2rem, 1.4rem + 2.2vw, 3.2rem)/.92 var(--f-display); text-transform: uppercase; margin-bottom: 10px; position: relative; z-index: 2; }
-.award-xl h3 { font-size: clamp(3.2rem, 2rem + 5vw, 6.5rem); }
+.award-xl h3 { font-size: clamp(2.8rem, 1.2rem + 3.2vw, 4.6rem); }
 .award h3 small { display: block; font-size: .36em; line-height: 1.2; letter-spacing: .14em; color: var(--muted); margin: .4em 0 .25em; }
 .award p { color: var(--muted); max-width: 36ch; position: relative; z-index: 2; }
 .award-index { position: absolute; top: 20px; right: 24px; z-index: 2; font: 900 1.1rem/1 var(--f-display); color: var(--violet-hi); letter-spacing: .1em; }
+.award-xl { grid-column: span 4; }
+.award-belt { grid-column: span 12; min-height: 0; flex-direction: row; align-items: center; gap: clamp(24px, 4vw, 56px); }
+.award-belt h3 { margin-bottom: 6px; }
+.belt-visual { flex: none; position: relative; width: clamp(180px, 22vw, 300px); height: 34px; border-radius: 4px; background: linear-gradient(90deg, #9ad8ff 0 72%, #1d3fbf 72%); box-shadow: 0 0 40px rgb(143 211 255 / .25), inset 0 -6px 0 rgb(0 0 0 / .15); }
+.belt-visual span { position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(100deg, transparent 30%, rgb(255 255 255 / .45) 50%, transparent 70%); background-size: 250% 100%; animation: shine 3.5s var(--ease-io) infinite; }
+@keyframes shine { from { background-position: 150% 0; } to { background-position: -100% 0; } }
 .award-icon { position: absolute; top: clamp(22px, 3vw, 36px); left: clamp(22px, 3vw, 36px); width: 48px; height: 48px; color: var(--violet-hi); }
 
 /* ---------- manifesto ---------- */
@@ -480,6 +487,7 @@ h2 em { color: transparent; -webkit-text-stroke: 1.5px var(--violet-hi); }
   .journey-aside { position: static; }
   .journey-photo { display: none; }
   .award, .award-xl { grid-column: span 12; }
+  .award-belt { flex-direction: column; align-items: flex-start; }
   .award-xl { min-height: 440px; }
   .scroll-cue { display: none; }
 }
