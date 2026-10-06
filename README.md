@@ -2,7 +2,7 @@
 Site estático (HTML + CSS + JS puro, sem build) da atleta e professora de Muay Thai Géssica Lima, dona da GL Fight.
 
 ## Abrir
-`npm run dev` e acesse `http://localhost:5174/`. Para o link da loja funcionar localmente, mantenha o servidor da loja na porta 5173.
+`npm run dev` e acesse `http://localhost:5174/`.
 
 ## Conteúdo
 - **Contatos:** edite `perfil` no topo de `js/atleta.js` (Instagram e WhatsApp). Os botões só aparecem quando preenchidos.
@@ -14,4 +14,4 @@ Hero · Marquee · História · Vídeo da vitória (pinado, cresce com o scroll)
 Animações respeitam `prefers-reduced-motion` e no celular o vídeo e a galeria viram blocos simples.
 
 ## Publicação
-Publique esta pasta. Antes, troque os links `../GLfight/index.html` pelo endereço público da loja e use URL absoluta em `og:image`.
+Publique esta pasta. A loja fica em https://glfight.vercel.app/. Depois de publicar, troque `og:image` por uma URL absoluta.

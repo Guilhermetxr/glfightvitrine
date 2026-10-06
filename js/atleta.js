@@ -2,7 +2,7 @@
 // instagram: 'https://www.instagram.com/usuario/'  ·  whatsapp: só números com DDI, ex. '5598999999999'
 export const perfil = {
   instagram: '',
-  whatsapp: '',
+  whatsapp: '5598984810386',
   mensagemWhatsapp: 'Oi, Géssica! Vi seu site e quero saber mais sobre as aulas de Muay Thai.'
 };
 
@@ -26,10 +26,6 @@ if (/^\d{12,13}$/.test(perfil.whatsapp)) {
 }
 document.querySelector('#ano').textContent = new Date().getFullYear();
 
-// Em desenvolvimento, a loja roda em outra porta.
-if (['localhost', '127.0.0.1'].includes(location.hostname)) {
-  document.querySelectorAll('a[href="../GLfight/index.html"]').forEach(link => { link.href = 'http://localhost:5173/index.html'; });
-}
 
 /* ---------- split de letras (hero) e palavras (manifesto) ---------- */
 let charIndex = 0;
